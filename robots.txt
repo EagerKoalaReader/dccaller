@@ -2,4 +2,4 @@ User-agent: GPTBot
 Disallow: /
 User-agent: *
 Disallow:
-Sitemap: https://eagerkoalareader/dccaller/sitemap.xml
+Sitemap: https://dccaller.com/sitemap.xml
