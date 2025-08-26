@@ -41,20 +41,20 @@
     .post-action-bar {
       justify-content: flex-start;
     }
-  }</style><div class="post-action-bar"><div class="post-action-btn" title="Bookmark this page" onclick="bookmarkThisPage()"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21 16.54 13.97 22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div><div class="post-action-btn" title="Copy link" onclick="copyPageLink()"><svg viewBox="0 0 24 24"><path d="M10.59 13.41a1 1 0 0 0 0 1.41l2.59 2.59a4 4 0 0 0 5.66-5.66l-1.42-1.42a1 1 0 0 0-1.41 1.41l1.42 1.42a2 2 0 0 1-2.83 2.83l-2.59-2.59a1 1 0 0 0-1.42 0zm2.82-2.82a1 1 0 0 0 0-1.41L10.82 6.6a4 4 0 0 0-5.66 5.66l1.42 1.42a1 1 0 1 0 1.41-1.41L6.57 10.8a2 2 0 0 1 2.83-2.83l2.59 2.59a1 1 0 0 0 1.42 0z"/></svg></div><a class="post-action-btn" title="Save to Pocket" href="#" onclick="saveToPocket()" rel="noopener"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 4a2 2 0 0 0-2 2v4.586c0 5.793 4.207 9.728 9.676 9.728S21.352 16.38 21.352 10.586V6a2 2 0 0 0-2-2H4zm11.818 5.11-3.093 3.093a.652.652 0 0 1-.924 0L8.667 10.07a.654.654 0 1 0-.924.924l3.133 3.134a.652.652 0 0 0 .924 0l3.133-3.134a.654.654 0 1 0-.924-.924z"/></svg></a></div><script>function bookmarkThisPage() {
-    const url = window.location.href;
-    const title = document.title;
-    try {
-      if (window.sidebar && window.sidebar.addPanel) {
-        window.sidebar.addPanel(title, url, '');
-      } else if (window.external && ('AddFavorite' in window.external)) {
-        window.external.AddFavorite(url, title);
-      } else {
-        alert('To bookmark this page, press Ctrl+D (Windows) or Cmd+D (Mac).');
-      }
-    } catch (e) {
-      alert('Your browser does not support automatic bookmarking. Use Ctrl+D or Cmd+D.');
-    }
+  }</style><div class="post-action-bar"><div class="post-action-btn rss-btn" title="Subscribe via RSS" onclick="openRSS()">RSS</div><style>.rss-btn {
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 14px;
+    color: #F7D6FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rss-btn:hover {
+    color: #7AA1FE;
+  }</style><div class="post-action-btn" title="Copy link" onclick="copyPageLink()"><svg viewBox="0 0 24 24"><path d="M10.59 13.41a1 1 0 0 0 0 1.41l2.59 2.59a4 4 0 0 0 5.66-5.66l-1.42-1.42a1 1 0 0 0-1.41 1.41l1.42 1.42a2 2 0 0 1-2.83 2.83l-2.59-2.59a1 1 0 0 0-1.42 0zm2.82-2.82a1 1 0 0 0 0-1.41L10.82 6.6a4 4 0 0 0-5.66 5.66l1.42 1.42a1 1 0 1 0 1.41-1.41L6.57 10.8a2 2 0 0 1 2.83-2.83l2.59 2.59a1 1 0 0 0 1.42 0z"/></svg></div><a class="post-action-btn" title="Save to Pocket" href="#" onclick="saveToPocket()" rel="noopener"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 4a2 2 0 0 0-2 2v4.586c0 5.793 4.207 9.728 9.676 9.728S21.352 16.38 21.352 10.586V6a2 2 0 0 0-2-2H4zm11.818 5.11-3.093 3.093a.652.652 0 0 1-.924 0L8.667 10.07a.654.654 0 1 0-.924.924l3.133 3.134a.652.652 0 0 0 .924 0l3.133-3.134a.654.654 0 1 0-.924-.924z"/></svg></a></div><script>function openRSS() {
+    // Change this URL to your actual RSS feed
+    window.open('/feed.xml', '_blank');
   }
 
   function copyPageLink() {
