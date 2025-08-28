@@ -3,7 +3,7 @@
     <title>D.C.Caller</title>
     <link href="https://dccaller.com/feed.xml" rel="self" />
     <link href="https://dccaller.com" />
-    <updated>2025-08-28T18:07:39+01:00</updated>
+    <updated>2025-08-28T18:10:21+01:00</updated>
     <author>
         <name>D.C.Caller</name>
     </author>
@@ -669,7 +669,7 @@
   </p>
 <hr class="separator separator--long-line" />
 
-    <h2 id="chapter-menu">
+    <h2 id="chapter-menu" class="align-center">
       Chapter Menu
     </h2>
 <div><!-- Victoria House Chapter Navigation -->
@@ -831,7 +831,7 @@
   </p>
 <hr class="separator separator--long-line" />
 
-    <h2 id="chapter-menu">
+    <h2 class="align-center">
       Chapter Menu
     </h2>
 <div><!-- Victoria House Chapter Navigation -->
