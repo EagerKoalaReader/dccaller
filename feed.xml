@@ -3,7 +3,7 @@
     <title>D.C.Caller</title>
     <link href="https://dccaller.com/feed.xml" rel="self" />
     <link href="https://dccaller.com" />
-    <updated>2025-08-27T01:20:50+01:00</updated>
+    <updated>2025-08-28T18:02:01+01:00</updated>
     <author>
         <name>D.C.Caller</name>
     </author>
@@ -206,6 +206,89 @@
   </p>
 <hr class="separator separator--long-line" />
 
+    <h2>
+      Chapter Menu
+    </h2>
+<div><!-- Victoria House Chapter Navigation -->
+<div class="vh-chapter-nav" role="navigation" aria-label="Victoria House chapters">
+  <div class="vh-chapters">
+    <a href="https://dccaller.com/victoria-house-part-1-of-9/">1</a>
+    <a href="https://dccaller.com/victoria-house-part-2-of-9/">2</a>
+    <a href="https://dccaller.com/victoria-house-part-3-of-9/">3</a>
+    <a href="https://dccaller.com/victoria-house-part-4-of-9/">4</a>
+    <a href="https://dccaller.com/victoria-house-part-5-of-9/">5</a>
+    <a href="https://dccaller.com/victoria-house-part-6-of-9/">6</a>
+    <a href="https://dccaller.com/victoria-house-part-7-of-9/">7</a>
+    <!-- Add future chapters 8/9 here as needed -->
+  </div>
+</div>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&display=swap');
+
+  .vh-chapter-nav {
+    background: transparent;
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+  }
+
+  .vh-chapters a {
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #3A3A3A;
+    margin: 0 5px;              /* 5px space between numbers */
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .vh-chapters a:visited {
+    color: #3A3A3A;
+  }
+
+  .vh-chapters a:hover {
+    color: #7AA1FE;
+  }
+
+  /* Active (current page) state */
+  .vh-chapters a.active,
+  .vh-chapters a.active:hover,
+  .vh-chapters a.active:visited {
+    color: #F7D6FF;
+    pointer-events: none;       /* unclickable */
+    cursor: default;
+  }
+</style>
+
+<script>
+  // Robustly highlight & disable the current chapter link
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".vh-chapters a");
+
+    const normalizePath = (p) => {
+      // ensure trailing slash, remove duplicate slashes
+      const path = p.replace(/\/+$/, "") + "/";
+      return path.replace(/\/{2,}/g, "/");
+    };
+
+    const currentPath = normalizePath(window.location.pathname);
+
+    links.forEach(link => {
+      const linkPath = normalizePath(new URL(link.getAttribute("href"), window.location.origin).pathname);
+
+      if (currentPath === linkPath) {
+        link.classList.add("active");
+        link.setAttribute("aria-current", "page");
+        link.setAttribute("tabindex", "-1");
+        link.removeAttribute("href"); // prevent keyboard activation too
+      }
+    });
+  });
+</script>
+</div>
+<hr class="separator separator--long-line" />
+
   <p>
     
   </p>
@@ -284,6 +367,89 @@
   <p>
     Gary spent some time explaining what he had recently seen. Although disordered, overlapping, and impossible to build a reliable timeline from, his stories were heard intently by my father and D.I. Broad and accepted as truth. While not always used for peaceful effect, Gary had a gift for rallying the other residents. Many came forward to corroborate fragments of his story, some simply calling out, ‘I saw that,’ and others filling in overlooked details. D.I. Broad had been writing at pace in his notebook before his biro pen ran out of ink. It was then that they turned their attention to Simon, who was sitting cross-legged by the bottle green door, alone.<br><br>D.I. Broad sat himself down next to Simon, while my father remained standing, looking down. He pulled a Dictaphone from his inside jacket pocket. Broad jerked forward, grabbing the back of Simon’s head and pressing his thumb hard into the fresh wound on Simon’s brow. Simon yelped sharply, loud enough to get the attention of the room.<br><br>'<em>Just so you know—we’re not fucking about</em>,' the detective barked, gritting his teeth. '<em>One word of a lie and we’ll throw you outside to that fucking... thing</em>.'<br><br>'<em>Explain the snake. What is the snake? Or worm, or whatever</em>,' my father added. Simon’s eyes showed more fear with my father bearing down on him than when the creature had appeared. Without further prompting, he answered quietly, '<em>It came from a book</em>.'<br><br>'<em>What? What fucking book</em>?' Broad demanded.<br><br>Simon took a short breath and explained. '<em>A small group of staff had been celebrating the charity’s 150th year. As the celebration wound down, Mrs Tapscott—a trustee of the charity and a Latin speaker—began reading from a strange book they found in the reading corner. A cloud appeared in the centre of the room, rolling around the hall before disappearing into the dormitories. A few minutes later, the cloud reappeared—this time speaking through one of the residents</em>.'<br><br>'<em>Why didn’t you mention this when you came to see us this afternoon? You told us you thought another resident had killed the missing girl</em>!' Broad said sharply.<br><br>'<em>Oh, come on, you would have had me sectioned. I just needed to get you here... to see for yourself</em>,' Simon blurted.<br><br>'<em>Okay, so what happened to the missing girl</em>?'<br><br>Simon paused, swallowed hard, then said quietly, '<em>We fed her to the demon</em>.'<br><br>'<em>Demon? You mean the snake</em>?'<br><br>'<em>No</em>.'<br><br>'<em>No? So there’s a demon and a snake</em>?'<br><br>'<em>The demon controls the creature. It eats people. It collects consciousness</em>.'<br><br>'<em>It collects what? What are you on about</em>?' Broad sneered.<br><br>'<em>I'm not sure . . . Tapscott understood it better</em>.'<br><br>'<em>How many people has it killed</em>?'<br><br>'<em>One a month for the last eighteen months</em>.'<br><br>'<em>So what, this thing just emerges and takes someone? Our friend Gary over there seems to think you bring it the food</em>,' my father said.<br><br>'<em>We brought it here. It bargained with us. We came up with a system. If the residents act up, they get a purple shirt. The demon selects from those wearing them at 9:23 pm on the 21st of every month—the time and day we summoned it</em>,' Simon responded.<br><br>'<em>So why is it attacking us</em>?'<br><br>'<em>I imagine you’re a threat to its supply. Can't be sure</em>.'<br><br>'<em>What happens if you don’t provide anyone</em>?'<br><br>'<em>Six of us were present that evening—only me left now</em>.'<br><br>'<em>Ah. So you’ll be in trouble</em>?'<br><br>'<em>Four wouldn’t participate or put the experience down to there being too much alcohol that night. They were taken first. There are a handful of other volunteers who weren’t present that night—day staff. They don’t know what’s happening</em>.'<br><br>Broad scoffed, incredulous. '<em>Bollocks. If four people vanished from the same place, the world would know. Not to mention the residents</em>.'<br><br>'<em>They were all volunteers from another program run by the charity. All foreign nationals. Orderlies</em>,' Simon corrected.<br><br>'<em>How have you hidden the rest? Haven’t relatives been asking questions</em>?' Broad snapped.<br><br>'<em>Families don’t bother once the problem is no longer theirs to deal with. Many of the residents have health problems, and we have a crematorium on the grounds</em>.' I saw my father’s anger building. He rubbed his thumbs against his index fingers—a sign he was close to exploding.<br><br>'<em>So nobody was going to miss a bunch of spackers, right? Except Gilly’s family cared very much, didn’t they</em>?'<br><br>'<em>Gilly was a mistake. The shirt was meant for someone else. Some of the residents—I can’t tell them apart</em>.'<br><br>Broad shook his head with disgust, clearly shocked by Simon’s statement. He stood up and made a brazen suggestion that surprised even my father, who looked at him disparagingly. '<em>I think I’d very much like to talk to this demon. Ask it here, would you</em>?'<br><br>'<em>It’s the 21st... she’s already here</em>.' Simon shifted his torso to look past my father’s legs. Everybody listening, including myself, followed his gaze over to the reading corner. Rosie was still there. Watching us.
   </p>
+<hr class="separator separator--long-line" />
+
+    <h2 class="align-center">
+      Chapter Menu
+    </h2>
+<div><!-- Victoria House Chapter Navigation -->
+<div class="vh-chapter-nav" role="navigation" aria-label="Victoria House chapters">
+  <div class="vh-chapters">
+    <a href="https://dccaller.com/victoria-house-part-1-of-9/">1</a>
+    <a href="https://dccaller.com/victoria-house-part-2-of-9/">2</a>
+    <a href="https://dccaller.com/victoria-house-part-3-of-9/">3</a>
+    <a href="https://dccaller.com/victoria-house-part-4-of-9/">4</a>
+    <a href="https://dccaller.com/victoria-house-part-5-of-9/">5</a>
+    <a href="https://dccaller.com/victoria-house-part-6-of-9/">6</a>
+    <a href="https://dccaller.com/victoria-house-part-7-of-9/">7</a>
+    <!-- Add future chapters 8/9 here as needed -->
+  </div>
+</div>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&display=swap');
+
+  .vh-chapter-nav {
+    background: transparent;
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+  }
+
+  .vh-chapters a {
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #3A3A3A;
+    margin: 0 5px;              /* 5px space between numbers */
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .vh-chapters a:visited {
+    color: #3A3A3A;
+  }
+
+  .vh-chapters a:hover {
+    color: #7AA1FE;
+  }
+
+  /* Active (current page) state */
+  .vh-chapters a.active,
+  .vh-chapters a.active:hover,
+  .vh-chapters a.active:visited {
+    color: #F7D6FF;
+    pointer-events: none;       /* unclickable */
+    cursor: default;
+  }
+</style>
+
+<script>
+  // Robustly highlight & disable the current chapter link
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".vh-chapters a");
+
+    const normalizePath = (p) => {
+      // ensure trailing slash, remove duplicate slashes
+      const path = p.replace(/\/+$/, "") + "/";
+      return path.replace(/\/{2,}/g, "/");
+    };
+
+    const currentPath = normalizePath(window.location.pathname);
+
+    links.forEach(link => {
+      const linkPath = normalizePath(new URL(link.getAttribute("href"), window.location.origin).pathname);
+
+      if (currentPath === linkPath) {
+        link.classList.add("active");
+        link.setAttribute("aria-current", "page");
+        link.setAttribute("tabindex", "-1");
+        link.removeAttribute("href"); // prevent keyboard activation too
+      }
+    });
+  });
+</script>
+</div>
 <hr class="separator separator--long-line" />
 
   <p>
@@ -503,6 +669,89 @@
   </p>
 <hr class="separator separator--long-line" />
 
+    <h2 id="chapter-menu">
+      Chapter Menu
+    </h2>
+<div><!-- Victoria House Chapter Navigation -->
+<div class="vh-chapter-nav" role="navigation" aria-label="Victoria House chapters">
+  <div class="vh-chapters">
+    <a href="https://dccaller.com/victoria-house-part-1-of-9/">1</a>
+    <a href="https://dccaller.com/victoria-house-part-2-of-9/">2</a>
+    <a href="https://dccaller.com/victoria-house-part-3-of-9/">3</a>
+    <a href="https://dccaller.com/victoria-house-part-4-of-9/">4</a>
+    <a href="https://dccaller.com/victoria-house-part-5-of-9/">5</a>
+    <a href="https://dccaller.com/victoria-house-part-6-of-9/">6</a>
+    <a href="https://dccaller.com/victoria-house-part-7-of-9/">7</a>
+    <!-- Add future chapters 8/9 here as needed -->
+  </div>
+</div>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&display=swap');
+
+  .vh-chapter-nav {
+    background: transparent;
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+  }
+
+  .vh-chapters a {
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #3A3A3A;
+    margin: 0 5px;              /* 5px space between numbers */
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .vh-chapters a:visited {
+    color: #3A3A3A;
+  }
+
+  .vh-chapters a:hover {
+    color: #7AA1FE;
+  }
+
+  /* Active (current page) state */
+  .vh-chapters a.active,
+  .vh-chapters a.active:hover,
+  .vh-chapters a.active:visited {
+    color: #F7D6FF;
+    pointer-events: none;       /* unclickable */
+    cursor: default;
+  }
+</style>
+
+<script>
+  // Robustly highlight & disable the current chapter link
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".vh-chapters a");
+
+    const normalizePath = (p) => {
+      // ensure trailing slash, remove duplicate slashes
+      const path = p.replace(/\/+$/, "") + "/";
+      return path.replace(/\/{2,}/g, "/");
+    };
+
+    const currentPath = normalizePath(window.location.pathname);
+
+    links.forEach(link => {
+      const linkPath = normalizePath(new URL(link.getAttribute("href"), window.location.origin).pathname);
+
+      if (currentPath === linkPath) {
+        link.classList.add("active");
+        link.setAttribute("aria-current", "page");
+        link.setAttribute("tabindex", "-1");
+        link.removeAttribute("href"); // prevent keyboard activation too
+      }
+    });
+  });
+</script>
+</div>
+<hr class="separator separator--long-line" />
+
   <p>
     
   </p>
@@ -580,6 +829,89 @@
   <p>
     I yanked my hand from the page as if from the jaws of a guillotine. I had seen something inexplicable—through the eyes and ears of people I could never meet, from a time I could never be truly present. It had all played out not as a dream or imagined scene, but as a vivid, living moment, observed from above. I had hovered over cobbled alleys and crooked rooftops, gliding on silent wings through a city ravaged by disease and dread. I had been a watcher—a bird, unseen, drifting above despair and judgement. It had been real. Too real. And now that I’d returned, something in me was different. As though a thin veil had lifted—one I hadn’t known was there.
   </p>
+<hr class="separator separator--long-line" />
+
+    <h2 id="chapter-menu">
+      Chapter Menu
+    </h2>
+<div><!-- Victoria House Chapter Navigation -->
+<div class="vh-chapter-nav" role="navigation" aria-label="Victoria House chapters">
+  <div class="vh-chapters">
+    <a href="https://dccaller.com/victoria-house-part-1-of-9/">1</a>
+    <a href="https://dccaller.com/victoria-house-part-2-of-9/">2</a>
+    <a href="https://dccaller.com/victoria-house-part-3-of-9/">3</a>
+    <a href="https://dccaller.com/victoria-house-part-4-of-9/">4</a>
+    <a href="https://dccaller.com/victoria-house-part-5-of-9/">5</a>
+    <a href="https://dccaller.com/victoria-house-part-6-of-9/">6</a>
+    <a href="https://dccaller.com/victoria-house-part-7-of-9/">7</a>
+    <!-- Add future chapters 8/9 here as needed -->
+  </div>
+</div>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&display=swap');
+
+  .vh-chapter-nav {
+    background: transparent;
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+  }
+
+  .vh-chapters a {
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #3A3A3A;
+    margin: 0 5px;              /* 5px space between numbers */
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .vh-chapters a:visited {
+    color: #3A3A3A;
+  }
+
+  .vh-chapters a:hover {
+    color: #7AA1FE;
+  }
+
+  /* Active (current page) state */
+  .vh-chapters a.active,
+  .vh-chapters a.active:hover,
+  .vh-chapters a.active:visited {
+    color: #F7D6FF;
+    pointer-events: none;       /* unclickable */
+    cursor: default;
+  }
+</style>
+
+<script>
+  // Robustly highlight & disable the current chapter link
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".vh-chapters a");
+
+    const normalizePath = (p) => {
+      // ensure trailing slash, remove duplicate slashes
+      const path = p.replace(/\/+$/, "") + "/";
+      return path.replace(/\/{2,}/g, "/");
+    };
+
+    const currentPath = normalizePath(window.location.pathname);
+
+    links.forEach(link => {
+      const linkPath = normalizePath(new URL(link.getAttribute("href"), window.location.origin).pathname);
+
+      if (currentPath === linkPath) {
+        link.classList.add("active");
+        link.setAttribute("aria-current", "page");
+        link.setAttribute("tabindex", "-1");
+        link.removeAttribute("href"); // prevent keyboard activation too
+      }
+    });
+  });
+</script>
+</div>
 <hr class="separator separator--long-line" />
 
   <p>
